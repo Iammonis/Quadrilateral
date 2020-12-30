@@ -1,10 +1,11 @@
+import { Home } from '@material-ui/icons';
+import {HomePageComponent} from "../src/Components/HomePage/HomePage"
 import './App.css';
-import { SearchBar } from './Components/SearchBar/SearchBar';
 
 function App() {
   return (
     <div className="App">
-      <SearchBar/>
+      <HomePageComponent/>
     </div>
   );
 }
