@@ -243,7 +243,6 @@ const useStyles = makeStyles({
 
 export const Navbar = () => {
     const [hidden, setHidden] = useState(false)
-    // const [jobsDropdown, setJobsDropdown] = useState(false)
     const classes = useStyles(hidden)
     
     const handleScroll = () => {
