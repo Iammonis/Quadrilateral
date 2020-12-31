@@ -1,0 +1,138 @@
+[
+    {
+        "id" : 1,
+        "sector" : "Information Technology",
+        "type" :[
+            {
+                "name" : "Analytics",
+                "company" : ["COURSE5 INTELLIGENCE PRIVATE LIMITED", "LatentView Analytics Pvt Ltd.", "RMS Risk Management Solutions India Pvt Ltd", "Verisk"]
+            },
+            {
+                "name" : "ChipDsg/Semicond.",
+                "company":["einfochips (An Arrow Company)", "GLOBALFOUNDRIES Engineering Private Limited", "KLA-Tencor Software India Pvt Ltd" ,"Maxim Integrated" ,"Micron"]
+            },
+            {
+                "name" :"Cloud Computing",
+                "company" : ["Protera Technologies Secure - 24", "IT Services Pvt Ltd"]
+            },
+            {
+                "name" :"Engineering Services",
+                "company" : ["DesignTech Systems Ltd.", "Robert Bosch Engineering and Business Solution Limited"]
+            },
+            {
+                "name" :"Financial Services & Software",
+                "company" : ["Atyeti IT Services Private Limited", "Avaloq India Private Limited", "AXA Business Services", "Edelman Financial Engines, LLC" ,"Factset Systems Inc.", "SS&C Technology"]
+            },
+            {
+                "name" :"Gaming",
+                "company" : ["Electronic Arts Games (India) Pvt. Ltd.", "GLU MOBILE"]
+            },
+            {
+                "name" :"ITES/BPO/.COM",
+                "company" : ["Capita India Pvt. Ltd", "CSS Corp","Elico Healthcare Services"]
+            },
+            {
+                "name" :"Managed Network Services",
+                "company" : ["NTT Global", "Sify Technologies", "Yotta Infrastructure Solutions LLP"]
+            },
+            {
+                "name" :"Product Software",
+                "company" : ["AVEVA", "Bentley", "CapitalCloud India (A Bottomline Technologies Company)", "CDK Global (India) Pvt Ltd", "Druva Data Solutions Private Limited", "Eli Research India Pvt. Ltd"," Fivetran India Pvt. Ltd.", "HERE Technologies", "Hexagon", "IHS Markit","Indecomm Technology Services", "INFOR (INDIA) PVT. LTD.", "ION Trading", "Newgen Software Technologies", "Paysafe", "PEGASYSTEMS", "Saama Technologies (India) Pvt. Ltd.", "SAP Labs India Pvt. Ltd."]
+            },
+            {
+                "name" :"Software Services",
+                "company" : ["AKAMAI TECHNOLOGIES INDIA PRIVATE LIMITED", "Atos Syntel", "Brillio Technologies", "CGI", "Cibersites India Private Limited"," Columbus Global Services", "Covalense Digital Data Intensity India Private Limited", "Espire Infolabs"," Extreme Networks ","GeP Solutions Pvt. Ltd.", "Harman Connected Services", "Heat Software", "Hinduja Tech Limited", "HTC Global Services Ltd.", "Impetus Infotech (India) Pvt. Ltd.", "Innominds Software Pvt. Ltd.", "Invenio Business Solutions", "ITC Infotech"," Lionbridge Technologies Private Limited", "Luxoft India LLP", "Medline Industries India Pvt Ltd.", "Nagarro Software" ,"Pride Technologies", "PROLIM Solutions India Pvt Ltd", "PubMatic India Pvt. Ltd."]
+            },
+            {
+                "name" :"Telecom/ Internet",
+                "company" : ["Ciena", "ECI TELECOM", "ExcelaCom Technologies Pvt. Ltd."," Nokia Solutions and Networks", "Verint Systems", "VERIZON"]
+            }
+        
+        ]
+         
+    },
+    {
+        "id" : 2,
+        "sector" : "Manufacturing",
+        "type" :[
+            {
+                "name" : "Apparel",
+                "company" : ["Shahi Exports Pvt Ltd."]
+            },
+            {
+                "name" : "Auto/Auto Equip.",
+                "company":["Hyundai Motor India Limited", "International Tractors Limited", "JBM Group", "Royal Enfield", "Skoda Auto Volkswagen India", "YAZAKI India Pvt. Ltd."]
+            },
+            {
+                "name" :"CRO",
+                "company" : ["PAREXEL", "PPD Pharmaceutical Development India Private Limit", "Syneos Health"]
+            },
+            {
+                "name" :"Diversified/Retail",
+                "company" : ["Murugappa Group"," Suguna Foods Pvt. Ltd.", "Tetra Pak"]
+            },
+            {
+                "name" :"EPC/Engg./Infra./Mining",
+                "company" : ["Apco Infratech Pvt Ltd","Cummins India Ltd.", "HCC Group", "JSW Group", "NCC Limited", "Sterling And Wilson Pvt. Ltd.", "Welspun Enterprise" ,"Wilo Mather and Platt Pumps Private Limited"]
+            },
+            {
+                "name" :"Healthcare/Pharma",
+                "company" : ["Alembic Pharmaceuticals Ltd.", "Alexis Hospital Aurobindo Pharma Ltd."," Dr. Reddy's Laboratories", "Emcure Pharmaceuticals Ltd", "GlaxoSmithKline Pharmaceuticals Limited", "Hinduja Hospitals Indegene Pvt. Ltd.", "Lupin Limited", "Medreich", "Sun Pharma"]
+            },
+            {
+                "name" :"Petroleum/Energy",
+                "company" : ["TATA POWER"]
+            },
+            {
+                "name" :"Switchgear/ Electrical Engineering",
+                "company" : ["C&S Electric Ltd.", "Toshiba Transmission & Distribution Systems"]
+            },
+            {
+                "name" :"Textile",
+                "company" : ["Welspun India"]
+            },
+            {
+                "name" :"Transport/Railways",
+                "company" : ["Alstom Transport"]
+            }
+        
+        ]
+         
+    },
+    {
+        "id" : 3,
+        "sector" : "Services",
+        "type" :[
+            {
+                "name" : "Banking",
+                "company" : ["AXIS BANK LIMITED"," Sopra Banking Software"]
+            },
+            {
+                "name" : "BPO/KPO.",
+                "company":["Sitel India Pvt Ltd"]
+            },
+            {
+                "name" :"Credit Bureau",
+                "company" : ["CRIF India"]
+            },
+            {
+                "name" :"Engineering services",
+                "company" : ["Neptunus Power Plant Services Pvt. Ltd."]
+            },
+            {
+                "name" :"Finance/Insurance",
+                "company" : ["AXA XL", "Dvara KGFS", "Edelweiss Financial Services Limited", "Empower Retirement", "Franklin Templeton Investments", "Future Generali India Life Insurance Co. Ltd.", "India Infoline Finance Ltd."]
+            },
+            {
+                "name" :"Infrastructure",
+                "company" : ["Infra.Market", "L.N. Malviya Infra Projects"]
+            },
+            {
+                "name" :"Realestate/Constr.",
+                "company" : ["Shapoorji Pallonji Company Ltd"]
+            }
+        
+        ]
+         
+    }
+]

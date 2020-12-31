@@ -1,0 +1,730 @@
+ [
+    {
+        "category": "info_tech",
+        "sub_categories": [
+            {
+                "sub_category_name": "Analytics",
+                "text_names": [
+                    {
+                        "name": "COURSE5 INTELLIGENCE PRIVATE LIMITED"
+                    },
+                    {
+                        "name": "LatentView Analytics Pvt Ltd."
+                    },
+                    {
+                        "name": "RMS Risk Management Solutions India Pvt Ltd."
+                    },
+                    {
+                        "name": "Verisk"
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "ChipDsg/Semicond.",
+                "text_names": [
+                    {
+                        "name": "einfochips (An Arrow Company)"
+                    },
+                    {
+                        "name": "GLOBALFOUNDRIES Engineering Private Limited"
+                    },
+                    {
+                        "name": "KLA-Tencor Software India Pvt Ltd."
+                    },
+                    {
+                        "name": "Maxim Integrated"
+                    },
+                    {
+                        "name": "Micron"
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "Cloud Computing",
+                "text_names": [
+                    {
+                        "name": "Protera Technologies"
+                    },
+                    {
+                        "name": "Secure - 24 IT Services Pvt Ltd."
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "Engineering Services",
+                "text_names": [
+                    {
+                        "name": "Ayeti IT Services Private Limited"
+                    },
+                    {
+                        "name": "Avaloq India Private Limited"
+                    },
+                    {
+                        "name": "AXA Business Services"
+                    },
+                    {
+                        "name": "Edelman Financial Engines, LLC"
+                    },
+                    {
+                        "name": "Factset Systems Inc."
+                    },
+                    {
+                        "name": "SS&C Technology"
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "Gaming",
+                "text_names": [
+                    {
+                        "name": "Electronic Art Games (India) Pvt Ltd."
+                    },
+                    {
+                        "name": "GLU Mobile"
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "Healthcare/Pharma",
+                "text_names": [
+                    {
+                        "name": "Cotiviti India Private Limited"
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "ITES/BPO/.COM",
+                "text_names": [
+                    {
+                        "name": "Capita India Pvt Ltd."
+                    },
+                    {
+                        "name": "CSS Corp"
+                    },
+                    {
+                        "name": "Elico Healthcare Services"
+                    },
+                    {
+                        "name": "ienergizer"
+                    },
+                    {
+                        "name": "Lennox International"
+                    },
+                    {
+                        "name": "McKinsey Global Services"
+                    },
+                    {
+                        "name": "SYKES"
+                    },
+                    {
+                        "name": "Williams LEA"
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "Legal",
+                "text_names": [
+                    {
+                        "name": "CPA Global Support Services India Pvt Ltd."
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "Managed Network Services",
+                "text_names": [
+                    {
+                        "name": "NTT Global"
+                    },
+                    {
+                        "name": "Sify Technologies"
+                    },
+                    {
+                        "name": "Yotta Infrastructure Solutions LLP"
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "Product Software",
+                "text_names": [
+                    {
+                        "name": "AVEVA"
+                    },
+                    {
+                        "name": "Bentley"
+                    },
+                    {
+                        "name": "CapitalCloud (A Bottomline Technologies Company)"
+                    },
+                    {
+                        "name": "CDK Global (India) Pvt Ltd."
+                    },
+                    {
+                        "name": "Dhruva Data Solutions Private Limited"
+                    },
+                    {
+                        "name": "Eli Research India Private Limited"
+                    },
+                    {
+                        "name": "Fivetran India Pvt Ltd."
+                    },
+                    {
+                        "name": "HERE Technologies"
+                    },
+                    {
+                        "name": "Hexagon"
+                    },
+                    {
+                        "name": "IHS Markit"
+                    },
+                    {
+                        "name": "Indecomm Technology Services"
+                    },
+                    {
+                        "name": "INFOR (INDIA) PVT. LTD."
+                    },
+                    {
+                        "name": "ION Trading"
+                    },
+                    {
+                        "name": "NewGen Software Technologies"
+                    },
+                    {
+                        "name": "PaySafe"
+                    },
+                    {
+                        "name": "PEGASYSTEMS"
+                    },
+                    {
+                        "name": "Saama Technologies (India) Pvt Ltd."
+                    },
+                    {
+                        "name": "SAP Labs India Pvt Ltd."
+                    },
+                    {
+                        "name": "SECLORE"
+                    },
+                    {
+                        "name": "Sierra Cedar"
+                    },
+                    {
+                        "name": "Sophos Technologies Pvt Ltd."
+                    },
+                    {
+                        "name": "SOTI India"
+                    },
+                    {
+                        "name": "TIBCO Software"
+                    },
+                    {
+                        "name": "Vertafore India Private Limited"
+                    },
+                    {
+                        "name": "Zebra Technologies"
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "Retail",
+                "text_names": [
+                    {
+                        "name": "Tesco Bengaluru"
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "Software Services",
+                "text_names": [
+                    {
+                        "name": "AKAMAI TECHNOLOGIES INDIA PRIVATE LIMITED"
+                    },
+                    {
+                        "name": "Atos Syntel"
+                    },
+                    {
+                        "name": "Brillio Technologies"
+                    },
+                    {
+                        "name": "CGI"
+                    },
+                    {
+                        "name": "CiberSites India Private Limited"
+                    },
+                    {
+                        "name": "Columbus Global Services"
+                    },
+                    {
+                        "name": "Covalense Digital"
+                    },
+                    {
+                        "name": "Data Intensity India Private Limited"
+                    },
+                    {
+                        "name": "Espire Infolabs"
+                    },
+                    {
+                        "name": "Extreme Networks"
+                    },
+                    {
+                        "name": "GeP Solutions Pvt Ltd."
+                    },
+                    {
+                        "name": "Harman Connected Services"
+                    },
+                    {
+                        "name": "Heat Software"
+                    },
+                    {
+                        "name": "Hinduja Tech Limited"
+                    },
+                    {
+                        "name": "HTC Global Services Ltd."
+                    },
+                    {
+                        "name": "Impetus Infotech (India) Pvt Ltd."
+                    },
+                    {
+                        "name": "Innominds Software Pvt. Ltd."
+                    },
+                    {
+                        "name": "Invenio Business Solutions"
+                    },
+                    {
+                        "name": "ITC Infotech"
+                    },
+                    {
+                        "name": "Lionbridge Technologies Private Limited"
+                    },
+                    {
+                        "name": "Luxoft India LLP"
+                    },
+                    {
+                        "name": "Medline Industries India Pvt Ltd."
+                    },
+                    {
+                        "name": "Nagarro Software"
+                    },
+                    {
+                        "name": "Pride Technologies"
+                    },
+                    {
+                        "name": "PROLIM Solutions India Pvt Ltd."
+                    },
+                    {
+                        "name": "PubMatic India Pvt Ltd."
+                    },
+                    {
+                        "name": "Sopra Steria India"
+                    },
+                    {
+                        "name": "T-Systems ICT India"
+                    },
+                    {
+                        "name": "Valtech"
+                    },
+                    {
+                        "name": "ValueLabs"
+                    },
+                    {
+                        "name": "Veritas Technologies"
+                    },
+                    {
+                        "name": "Vidushi Infotech Software Solutions Provider"
+                    },
+                    {
+                        "name": "Wissen Infotech Pvt Ltd."
+                    },
+                    {
+                        "name": "Zen3 Infosolutions"
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "Telecom/Internet",
+                "text_names": [
+                    {
+                        "name": "Ciena"
+                    },
+                    {
+                        "name": "ECI TELECOM"
+                    },
+                    {
+                        "name": "ExcelaCom Technologies Pvt Ltd."
+                    },
+                    {
+                        "name": "Nokia Solutions and Networks"
+                    },
+                    {
+                        "name": "Verint Systems"
+                    },
+                    {
+                        "name": "VERIZON"
+                    },
+                    {
+                        "name": "Vodafone India Services"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "category": "Manufacturing",
+        "sub_categories": [
+            {
+                "sub_category_name": "Air Compressors",
+                "text_names": [
+                    {
+                        "name": "ELGI Equipments Ltd."
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "Apparel",
+                "text_names": [
+                    {
+                        "name": "Shahi Exports Pvt Ltd."
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "Auto/Auto Equip",
+                "text_names": [
+                    {
+                        "name": "Hyundai Motor India Limited"
+                    },
+                    {
+                        "name": "International Tractors Limited"
+                    },
+                    {
+                        "name": "JBM Group"
+                    },
+                    {
+                        "name": "Royal Enfield"
+                    },
+                    {
+                        "name": "Skoda Auto Volkswagen India"
+                    },
+                    {
+                        "name": "YAZAKI India Pvt. Ltd."
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "CRO",
+                "text_names": [
+                    {
+                        "name": "PAREXEL"
+                    },
+                    {
+                        "name": "PPD Pharmeceutical Development India Private Limited"
+                    },
+                    {
+                        "name": "Syneos Health"
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "Diversified/Retail",
+                "text_names": [
+                    {
+                        "name": "Murugappa Group"
+                    },
+                    {
+                        "name": "Suguna Foods Pvt Ltd."
+                    },
+                    {
+                        "name": "Tetra Pak"
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "Durable/Fmcg/Electr",
+                "text_names": [
+                    {
+                        "name": "D F M Foods Ltd."
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "EPC/Engg./Infra./Mining",
+                "text_names": [
+                    {
+                        "name": "Apco Infratech Pvt Ltd."
+                    },
+                    {
+                        "name": "Cummins India Ltd."
+                    },
+                    {
+                        "name": "HCC Group"
+                    },
+                    {
+                        "name": "JSW Group"
+                    },
+                    {
+                        "name": "NCC Limited"
+                    },
+                    {
+                        "name": "Sterling and Wilson Pvt. Ltd."
+                    },
+                    {
+                        "name": "Welspun Enterprise"
+                    },
+                    {
+                        "name": "Wilo Mather and Platt Pumps Private Limited"
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "Fast Moving Consumer Healthcare",
+                "text_names": [
+                    {
+                        "name": "Glaxosmithkline Asia Pvt Ltd"
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "Healthcare/Pharma",
+                "text_names": [
+                    {
+                        "name": "Alembic Pharmaceuticals Ltd."
+                    },
+                    {
+                        "name": "Alexis Hospital"
+                    },
+                    {
+                        "name": "Aurobindo Pharma Ltd."
+                    },
+                    {
+                        "name": "Dr. Reddy's Laboratories"
+                    },
+                    {
+                        "name": "Emcure Pharmaceuticals Ltd"
+                    },
+                    {
+                        "name": "GlaxoSmithKline Pharmaceuticals Limited"
+                    },
+                    {
+                        "name": "Hinduja Hospitals"
+                    },
+                    {
+                        "name": "Indegene Pvt Ltd."
+                    },
+                    {
+                        "name": "Lupin Limited"
+                    },
+                    {
+                        "name": "Medreich"
+                    },
+                    {
+                        "name": "Sun Pharma"
+                    },
+                    {
+                        "name": "Syngene"
+                    },
+                    {
+                        "name": "Torrent Pharmaceuticals Ltd."
+                    },
+                    {
+                        "name": "Walter Bushnell"
+                    },
+                    {
+                        "name": "Zydus Cadila"
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "Petrolium/Energy",
+                "text_names": [
+                    {
+                        "name": "TATA POWER"
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "Pipes/Piping/Plastic",
+                "text_names": [
+                    {
+                        "name": "Wellspun Corp"
+                    }
+                ]
+            },
+            {
+                "sub_category_names": "Steel",
+                "text_names": [
+                    {
+                        "name": "TATA STEEL"
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "Switchgear/Electrical Engineering",
+                "text_names": [
+                    {
+                        "name": "C&S Electric Ltd."
+                    },
+                    {
+                        "name": "Toshiba Transmission & Distribution Services"
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "Textile",
+                "text_names": [
+                    {
+                        "name": "Wellspun India"
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "Transmission and Distribution",
+                "text_names": [
+                    {
+                        "name": "TBEA Energy (India) Pvt. Ltd."
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "Transport/Railways",
+                "text_names": [
+                    {
+                        "name": "Alstom Transport"
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "Wind Energy",
+                "text_names": [
+                    {
+                        "name": "Vestas Wind Technology"
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "Upstream Oil & Gas",
+                "text_names": [
+                    {
+                        "name": "O&G SKILLS"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "category": "Services",
+        "sub_categories": [
+            {
+                "sub_category_name": "Banking",
+                "text_names": [
+                    {
+                        "name": "Axis Bank Limited"
+                    },
+                    {
+                        "name": "Sopra Banking Software"
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "BPO/KPO",
+                "text_names": [
+                    {
+                        "name": "Sitel India Pvt Ltd"
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "Credit Bureau",
+                "text_names": [
+                    {
+                        "name": "CRIF India"
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "Engineering Services",
+                "text_names": [
+                    {
+                        "name": "Neptunus Power Plant Services Private Limited"
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "Education",
+                "text_names": [
+                    {
+                        "name": "ITM Edutech (India) Ltd."
+                    },
+                    {
+                        "name": "NIIT Ltd."
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "Finance/Insurance",
+                "text_names": [
+                    {
+                        "name": "AXA XL"
+                    },
+                    {
+                        "name": "Dvara KGFS"
+                    },
+                    {
+                        "name": "Edelweiss Financial Services Limited"
+                    },
+                    {
+                        "name": "Empower Retirement"
+                    },
+                    {
+                        "name": "Franklin Templeton Investments"
+                    },
+                    {
+                        "name": "Future Generali India Life Insurance Co. Ltd."
+                    },
+                    {
+                        "name": "India Infoline Finance Ltd."
+                    },
+                    {
+                        "name": "Moody's"
+                    },
+                    {
+                        "name": "Pricewater House Coopers Service"
+                    },
+                    {
+                        "name": "Pricewater House Coopers Private Limited"
+                    },
+                    {
+                        "name": "SKP Business Consulting LLP"
+                    },
+                    {
+                        "name": "Star Health Insurance"
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "Infrastructure",
+                "text_names": [
+                    {
+                        "name": "Infra Market"
+                    },
+                    {
+                        "name": "L. N. Malviya Infra Projects"
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "NGO",
+                "text_names": [
+                    {
+                        "name": "Isha Foundation"
+                    }
+                ]
+            },
+            {
+                "sub_category_name": "Real Estate/Constr.",
+                "text_names": [
+                    {
+                        "name": "Shapoorji Pallonji Company Ltd"
+                    }
+                ]
+            }
+        ]
+    }
+]
