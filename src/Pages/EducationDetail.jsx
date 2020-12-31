@@ -1,15 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Button } from '@material-ui/core';
+import {Button,Typography } from '@material-ui/core';
+import {ToggleButton, ToggleButtonGroup} from '@material-ui/lab'
 
 
 const Label = styled.div`
     width: 120px;
-    text-align: left;
+    text-align: right;
     height: 15px;
     padding-bottom: 5px;
 `;
-const EducatioDetail = ({detail, handleChange,classes,handleSubmit, setCourseType}) =>{
+const EducatioDetail = ({detail, handleChange,classes,handleSubmit, setCourseType, course_type}) =>{
     
     const {course, specialization, university, passing,tags} = detail
    
@@ -59,9 +60,28 @@ const EducatioDetail = ({detail, handleChange,classes,handleSubmit, setCourseTyp
             <div>
                 <Label>Course Type</Label>
                 <div style={{display : "flex", margin: 0}}>
-                    <button className={classes.courseTypeBtn} onClick={(e)=>setCourseType(e.target.value)}>Full Time</button>
-                    <button className={classes.courseTypeBtn} onClick={(e)=>setCourseType(e.target.value)}>Part Time</button>
-                    <button className={classes.courseTypeBtn} onClick={(e)=>setCourseType(e.target.value)}>correspondence</button>
+                    <button className={classes.courseTypeBtn} onClick={(e)=>setCourseType(e.target.innerHTML)}>Full Time</button>
+                    <button className={classes.courseTypeBtn} onClick={(e)=>setCourseType(e.target.innerHTML)}>Part Time</button>
+                    <button className={classes.courseTypeBtn} onClick={(e)=>setCourseType(e.target.innerHTML)}>correspondence</button>
+                    {/* <div className={classes.toggleContainer}>
+                        <ToggleButtonGroup
+                          value={course_type}
+                          exclusive
+                          onChange={setCourseType}
+                          aria-label="Job Types"
+                        >
+                          <ToggleButton value="Full Time" aria-label="full time">
+                            <Typography>Full Time</Typography>
+                          </ToggleButton>
+                          <ToggleButton value="Part Time" aria-label="part time">
+                            <Typography>Part Time</Typography>
+                          </ToggleButton>
+                          <ToggleButton value="correspondence" aria-label="correspondence">
+                            <Typography>correspondence</Typography>
+                          </ToggleButton>
+                         
+                        </ToggleButtonGroup>
+                    </div> */}
                 </div>
             </div>
             <div>

@@ -5,12 +5,12 @@ import {Button } from '@material-ui/core';
 
 const Label = styled.div`
     width: 120px;
-    text-align: left;
+    text-align: right;
     height: 15px;
     padding-bottom: 5px;
 `;
 const PersonalDetail = ({handleChange, detail, classes, handleShowtextAria, handleEducationForm,openTextAria }) =>{
-    const {name, email, password, mobile_no, city,resume, course, specialization, university, passing_year, skils} = detail
+    const {name, email, password, mobile_no, city,resume} = detail
 
     return(
          <>

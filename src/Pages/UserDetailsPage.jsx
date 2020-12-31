@@ -49,12 +49,26 @@ const useStyles = makeStyles((theme) => ({
           backgroundColor: '#4a90e2',
         }
     },
+    // radio_label : {
+    //     width: "150px",
+    //     height: "50px",
+    //     position: "relative",
+    //     border: "1px solid grey",
+    //     float: "left",
+    //     padding: 0
+
+    // },
+    // radio_input : {
+    //     opacity: 0,
+    //     left:10,
+    //     position: "absolute"
+    // },
     form:{
         width: "70%",
         '& div':{
             '& div': {
                 display: "flex",
-                margin: "20px",
+                margin: "15px",
                 '& input':{
                     width: "500px",
                     padding: "2px 10px",
@@ -70,7 +84,11 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: 0,
         outline: "none",
         border: "1px solid grey",
-        background: "white"
+        background: "white",
+        '& :active':{
+            background: "#4a90e2"
+        }
+
     }
 
 }));
@@ -92,17 +110,13 @@ const UserDetailsPage = () =>{
     }
     const [openTextAria, setOpenTextAria] = React.useState(false)
     const [showEducationForm, setShowEducationForm] = React.useState(false)
-    const [skills, setSkills] = React.useState([])
     const [course_type, setCourse_type] = React.useState("")
 
     
     const classes = useStyles();
     const [detail, setDetail] = useMergeState(initState);
 
-    React.useEffect(()=>{
-        let newSkills = initState.tags.split(", ")
-        setSkills(s => [...s, ...newSkills])
-    },[detail.tags])
+   
     const handleChange = (e) =>{
         const {name, value} = e.target;
         setDetail({[name] : value})
@@ -123,7 +137,8 @@ const UserDetailsPage = () =>{
                 mobile_no,city,
                 highest_qualifications, 
                 course, specialization, 
-                university, passing, skills} = detail
+                university, passing, tags} = detail
+        let skills = tags.split(",")
         const payload = {
             name,email, password,
                 mobile_no,city,
@@ -132,8 +147,8 @@ const UserDetailsPage = () =>{
                 university, course_type, passing, skills
         }
 
-        dispatch(registerUser(payload))
-        //console.log(payload)
+        // dispatch(registerUser(payload))
+        console.log(payload)
     }
 
 
@@ -174,6 +189,7 @@ const UserDetailsPage = () =>{
                                                 handleChange={handleChange} 
                                                 classes={classes}
                                                 handleSubmit={handleSubmit}
+                                                course_type={course_type}
                                                 setCourseType={setCourseType}/>
                             
                             )
