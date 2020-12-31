@@ -1,10 +1,15 @@
-import {createStore, compose, applyMiddleware} from 'redux'
+import {createStore, compose, applyMiddleware, combineReducers} from 'redux'
 import {registerReducer} from './Register/registerReducer'
 import thunk from 'redux-thunk';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const rootReducer = ({
+    user_reg: registerReducer,
+
+
+})
 
 export const store = createStore(
-    registerReducer,
+    rootReducer,
     composeEnhancers(applyMiddleware(thunk))
 )
