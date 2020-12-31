@@ -1,11 +1,16 @@
+import { Provider } from 'react-redux';
 import './App.css';
-import { Login } from './Components/Recruiter/Register/Login'
+import {  Router } from './Components/Route/Route';
+import { store } from './Redux/store';
+
 
 function App() {
   return (
+    <Provider store= {store}>
     <div className="App">
-        <Login />
+      <Router />
     </div>
+    </Provider>
   );
 }
 
