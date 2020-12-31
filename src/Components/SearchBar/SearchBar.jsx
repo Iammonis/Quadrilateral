@@ -86,7 +86,7 @@ export function SearchBar() {
             </div>
         <div>
             <div>    
-                { searchText == "" ? null : open && (searchText.length >1 &&Skills.map(item => (
+                { searchText === "" ? null : open && (searchText.length >1 &&Skills.map(item => (
                 <div onClick = {()=>{setSearchText(item)
                 setOpen(false)}
                 }>{item}</div>
@@ -94,10 +94,12 @@ export function SearchBar() {
                 }
             </div>
             <div>
-            { searchLoc == "" ? null : loc && (searchLoc.length >1 &&Locations.map(item => (
+            { searchLoc === "" ? null : loc && (searchLoc.length > 1 &&Locations.map(item => (
                 <div onClick = {()=>{setSearchLoc(item)
                 setLoc(false)}
-                }>{item}</div>
+                }>
+                    {item}
+                </div>
                 )))
                 }
             </div>

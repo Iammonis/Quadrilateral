@@ -6,7 +6,6 @@ import { Login } from '../Login'
 const Router=()=>{
     return(
         <div>
-         
             <Route path='/login' exact render={()=><Login/>} />
             
         </div>

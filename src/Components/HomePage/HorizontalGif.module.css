@@ -1,0 +1,12 @@
+.box {
+    margin: 20px;
+    width: 950px;
+    padding: 20px;
+    height: 80px;
+    border: 1px solid #edf3fa;
+    box-shadow: 2px 2px 2px 2px #EDF3FA;
+}
+
+.box > img {
+    margin: 0px 15px
+}
