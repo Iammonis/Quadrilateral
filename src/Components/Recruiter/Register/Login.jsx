@@ -23,7 +23,7 @@ const useStyles = makeStyles({
         alignSelf:'center',
         width: '1024px',
         maxHeight:'100%',
-        paddingTop:'75px',
+        paddingTop:'50px',
 
         '& .left-login': {
             width: '60%',
@@ -60,14 +60,14 @@ const useStyles = makeStyles({
         borderRadius: '4px',
         display:'flex',
         flexDirection:'column',
-
+        
         '& .forms':{
             display: 'flex',
             justifyContent: 'center'
         },
         '& .selector':{
             display: 'flex',
-            borderBottom:'1px solid #DFE6ED'
+            borderBottom:'1px solid #DFE6ED',
         },
         '& .selector > h5':{
             margin: '30px 20px 0',
@@ -84,7 +84,8 @@ const useStyles = makeStyles({
             background:'white',
             alignItems:'center',
             padding: '40px 0',
-            color:'#666'
+            color:'#666',
+            transition: '0.4s cubic-bezier(0.6, -0.28, 0.74, 0.05)',
         },
         '& form > input, form > select': {
             border:'none',
@@ -110,10 +111,11 @@ const useStyles = makeStyles({
             color:'black'
         },
         '& .login-tab': {
+            fontSize:'12px',
             marginTop: '20px'
         },
         '& .login-tab > div': {
-            
+            marginTop:'5px'
         },
         '& .forgot-pass':{
             margin:'20px 0'
@@ -123,14 +125,17 @@ const useStyles = makeStyles({
             textAlign:'left'
         },
         '& .client-para':{
-            margin: '0 20px',
+            margin: '0 0 20px',
         },
         '& #form-bot': {
             width:'100%',
             display:'flex',
             flexDirection:'column',
             justifyContent:'center',
-            alignItems:'center'
+            alignItems:'center',
+            borderTop: '1px solid #666',
+            paddingTop:'30px',
+            marginTop:'20px',
         },
         '& #form-bot > button': {
             height:'36px',
@@ -149,11 +154,17 @@ const useStyles = makeStyles({
 
 export const Login = () => {
     const [loginTab, setLoginTab] = useState(false) 
+    const [email, setEmail] = useState('') 
+    const [password, setPassword] = useState('') 
     const classes = useStyles()
+
+    const handleSubmit = () => {
+
+    }
 
     return (
         <main className={classes.root}>
-            <Navbar />
+            <Navbar loginTab={loginTab} />
             <div className={classes.wrapperLogin}>
                 <div className="left-login">
                     <p>NAUKRI EMPLOYER ZONE</p>
@@ -182,14 +193,14 @@ export const Login = () => {
                                     <button>Submit Enquiry</button>
                                 </form> :
                                 <form className='login-tab'>
-                                    <input placeholder="Registered Email ID" type="text"/>
-                                    <input placeholder="Password" type="text"/>
+                                    <input onChange={ e => setEmail(e.target.value) } value={email} placeholder="Registered Email ID" type="text"/>
+                                    <input onChange={ e => setPassword(e.target.value) } value={password} placeholder="Password" type="text"/>
                                     <button>Login</button>
                                     <a className='forgot-pass' href="#">Forgot Password ?</a>
                                     <p>Keep your account safe. <a href="#">Learn How</a></p>
                                     <div style={{width:'100%', display:'flex', justifyContent:'space-between'}}>
-                                        <p>Have a Query? <a href="#">Contact Us</a></p>
-                                        <p><a href="#">Fraud Alert!</a></p>
+                                        <div><p>Have a Query? <a href="#">Contact Us</a></p></div>
+                                        <div><a href="#">Fraud Alert!</a></div>
                                     </div>
                                     <div id='form-bot'> 
                                         <p className='client-para'>Are you a new client ?</p>
