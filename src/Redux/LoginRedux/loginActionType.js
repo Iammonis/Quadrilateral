@@ -1,0 +1,4 @@
+export let LOGIN_REQUEST = "LOGIN_REQUEST";
+export let LOGIN_SUCCESS = "LOGIN_SUCCESS";
+export let LOGIN_FAILURE = "LOGIN_FAILURE";
+
