@@ -1,0 +1,108 @@
+.login_heading {
+    font-size: 21px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.bottom_box1 {
+    padding: 10px 40px 0px 40px
+}
+
+.button {
+    margin: 20px 16px 10px 10px;
+    color: #091e42;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 5px;
+    width: 100px;
+    box-shadow: 2px 2px 2px 2px #EDF3FA;
+    background-color: white;
+    border: 1px solid white;
+}
+
+.top_box {
+    padding: 30px 40px;
+}
+
+.activity {
+    font-size: 11px;
+    font-weight: 550;
+    color: grey;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.bottom_box {
+    padding: 30px 40px 20px 40px;
+}
+
+.or {
+    margin-left: 42%;
+    font-size: 11px;
+    color: grey;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.last_box {
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-left: 80px;
+    margin-right: auto;
+}
+
+.naukri {
+    color: grey;
+    margin-right: 3px;
+}
+
+.registerfree {
+    color: #4A90E2
+}
+
+.otp {
+    margin: 0px 40px;
+    padding: 10px;
+    width: 275px;
+    border: 1px solid #4A90E2;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: white;
+    color: #4A90E2;
+    border-radius: 2px;
+}
+.submit {
+    background-color: #4A90E2;
+    margin: 20px 40px 10px 40px;
+    padding: 10px;
+    width: 275px;
+    border: 1px solid #4A90E2;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 2px;
+}
+
+.forget {
+    float:right;
+    font-size: 11px;
+    text-align: right;
+    font-weight: 600;
+    color: #4A90E2;
+}
+
+.email_heading {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.email_input {
+    width: 250px;
+    padding: 10px;
+    margin: 5px 0px;
+    border: .5px solid rgb(102, 102, 102);
+}
