@@ -6,6 +6,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchLoginData } from '../Redux/LoginRedux/loginAction';
+import { SearchBar } from './SearchBar/SearchBar';
 const drawerWidth = 400;
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -75,6 +76,7 @@ export const Login = ()=>{
     }
     return(
         <>
+        
         <Link to="/login">
             <h2 onClick = {()=>setOpen(!open)}>Login</h2></Link>
             <Drawer
