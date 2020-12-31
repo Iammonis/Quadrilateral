@@ -49,20 +49,6 @@ const useStyles = makeStyles((theme) => ({
           backgroundColor: '#4a90e2',
         }
     },
-    // radio_label : {
-    //     width: "150px",
-    //     height: "50px",
-    //     position: "relative",
-    //     border: "1px solid grey",
-    //     float: "left",
-    //     padding: 0
-
-    // },
-    // radio_input : {
-    //     opacity: 0,
-    //     left:10,
-    //     position: "absolute"
-    // },
     form:{
         width: "70%",
         '& div':{
@@ -146,12 +132,12 @@ const UserDetailsPage = () =>{
                 university, course_type, passing, skills
         }
 
-        // dispatch(registerUser(payload))
-        console.log(payload)
+        dispatch(registerUser(payload))
+        //console.log(payload)
     }
 
 
-    let category = ["Personal", "Employment", "Education"]
+    let category = ["Personal", "Education"]
     return(
         <div style={{padding: 0, margin:0, background:"#FCFCFC"}} >
             <Header>
