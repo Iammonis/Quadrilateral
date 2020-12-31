@@ -76,6 +76,7 @@ export const Login = ()=>{
     }
     return(
         <>
+        
         <Link to="/login">
             <h2 className = {styles.login_heading} onClick = {()=>setOpen(!open)}>Login</h2></Link>
             <Drawer

@@ -55,11 +55,11 @@ export const Login = () => {
 
     React.useEffect(()=>{
         dispatch(fetchLoginData())
-    },[])
+    }, [])
     
     const handleLogin=()=>{
         
-       const item = data.map((item)=>(item.email==email && item.password == password) ? (true):(false) )
+       const item = data.map((item)=>(item.email===email && item.password === password) ? (true):(false) )
         console.log(item)
         if( item[0]){
             setError(false)
