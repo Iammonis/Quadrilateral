@@ -1,5 +1,6 @@
 import { Provider } from 'react-redux';
 import './App.css';
+import { Login } from './Components/Recruiter/Register/Login';
 import { Register } from './Components/Recruiter/Register/Register';
 import {  Router } from './Components/Route/Route';
 import { store } from './Redux/store';
@@ -13,7 +14,8 @@ function App() {
       
       {/* <SearchBar/>
       <Router/> */}
-      <Register/>
+      {/* <Register/> */}
+      <Login/>
     </div>
     </Provider>
   );
