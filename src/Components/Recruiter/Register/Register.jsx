@@ -1,7 +1,12 @@
+import React from 'react'
 import { useState } from 'react'
 import { Navbar } from '../Navbar'
 import { Footer } from '../Footer'
 import { makeStyles } from '@material-ui/core/styles'
+import { useDispatch, useSelector } from 'react-redux'
+import { getRegisterData } from '../../../Redux/RecruiterRegister/GetRegister/getAction'
+import { postRegisterData } from '../../../Redux/RecruiterRegister/PostRegister/postAction'
+import { red } from '@material-ui/core/colors'
 
 const useStyles = makeStyles({
     root: ({
@@ -95,9 +100,45 @@ export const Register = () => {
     const [name, setName] = useState('')
     const [gst, setGST] = useState('') // optional
     const classes = useStyles()
+    const recruiterData = useSelector((state)=>state.get.recruiterData)
+    const dispatch = useDispatch()
+    const status = useSelector((state)=>state.post.status)
+    const [err,setErr] = useState(false)
+    const payload = {
+        company_name : companyName,
+        email : email ,
+        mobile : mobile,
+        pin : pin,
+        name : name,
+        gst : gst
+    }
+
+    React.useEffect(()=>{
+        dispatch(getRegisterData())
+       
+    },[recruiterData])
 
     const handleSubmit = e => {
+        e.preventDefault()
+        const item = recruiterData.map((item)=>(item.company_name === companyName && item.email === email)?(1):(0))
+        console.log(item)
+        var count = 0
+        for(var i=0;i<item.length;i++){
+            if(item[i]==1){
+                count++
+            }
+        }
+        console.log(count)
+        if(companyName!="" && email!="" && mobile != ""&& pin != "" && name != ""){
+            if(count == 0){
+                dispatch(postRegisterData(payload)) 
+                alert("Registration is Successfull") 
+            }else{
+                setErr(true)
+            } 
+        }
 
+        
     }
 
     return (
@@ -114,12 +155,13 @@ export const Register = () => {
                     <p>or already registered? <a href="#">Login Now</a></p>
                     <form >
                         <input onChange={ e => setCompanyName(e.target.value) } value={companyName} placeholder='Company Name' type="text"/>
+                        {err&&<div style = {{color : red}}>Comapny is Already Registered</div>}
                         <input onChange={ e => setEmail(e.target.value) } value={email} placeholder='Official Email' type="text"/>
                         <input onChange={ e => setMobile(e.target.value) } value={mobile} placeholder='Mobile / Landline' type="text"/>
                         <input onChange={ e => setPin(e.target.value) } value={pin} placeholder="Contact Person's Name" type="text"/>
                         <input onChange={ e => setName(e.target.value) } value={name} className='small-input' placeholder='Pin Code' type="text"/>
                         <input onChange={ e => setGST(e.target.value) } value={gst} className='small-input' placeholder='GSTIN (Optional)' type="text"/>
-                        <button>Create Account</button>
+                        <button onClick = {handleSubmit}>Create Account</button>
                     </form>
                 </div>
             </div>

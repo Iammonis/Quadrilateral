@@ -60,9 +60,15 @@ export const Login = ()=>{
     
     const handleLogin=()=>{
         
-       const item = data.map((item)=>(item.email==email && item.password == password) ? (true):(false) )
+       const item = data.map((item)=>(item.email==email && item.password == password) ? (1):(0) )
         console.log(item)
-        if( item[0]){
+        var count =0
+        for(var i=0;i<item.length;i++){
+            if(item[i]==1){
+                count++
+            }
+        }
+        if( count==1){
             setError(false)
             setIsAuth(true)
         }
