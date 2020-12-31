@@ -156,7 +156,7 @@ const useStyles = makeStyles({
     })
 })
 
-export const Navbar = () => {
+export const Navbar = ({ loginTab }) => {
     const classes = useStyles()
     return (
         <nav className={classes.root}>
@@ -181,7 +181,7 @@ export const Navbar = () => {
                 </div>
                 <div className="right">
                     <div className='phone'>
-                        <div>India Sales Toll Free (9:30 AM to 6:30PM)</div>
+                        { loginTab ? <div>Recruiter Toll Free (10 AM to 6 PM)</div> : <div>India Sales Toll Free (9:30 AM to 6:30PM)</div>}
                         <div>
                             <img className='phone-icon' src="https://static.naukimg.com/s/5/114/i/phone_grey.png" alt=""/>
                             <p>1800-102-2558</p>

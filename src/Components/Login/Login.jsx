@@ -6,7 +6,6 @@ import CloseIcon from '@material-ui/icons/Close';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchLoginData } from '../Redux/LoginRedux/loginAction';
-import styles from "./Login.module.css"
 const drawerWidth = 400;
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -42,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
     
     
   }));
-export const Login = ()=>{
+export const Login = () => {
     const classes = useStyles();
     const [open,setOpen]=useState(false)
     const [log,setLog] = useState(true)
@@ -56,19 +55,13 @@ export const Login = ()=>{
 
     React.useEffect(()=>{
         dispatch(fetchLoginData())
-    },[])
+    }, [])
     
     const handleLogin=()=>{
         
-       const item = data.map((item)=>(item.email==email && item.password == password) ? (1):(0) )
+       const item = data.map((item)=>(item.email===email && item.password === password) ? (true):(false) )
         console.log(item)
-        var count =0
-        for(var i=0;i<item.length;i++){
-            if(item[i]==1){
-                count++
-            }
-        }
-        if( count==1){
+        if( item[0]){
             setError(false)
             setIsAuth(true)
         }
@@ -82,9 +75,8 @@ export const Login = ()=>{
     }
     return(
         <>
-        
         <Link to="/login">
-            <h2 className = {styles.login_heading} onClick = {()=>setOpen(!open)}>Login</h2></Link>
+            <h2 onClick = {()=>setOpen(!open)}>Login</h2></Link>
             <Drawer
             className={classes.drawer}
             variant="persistent"
@@ -96,58 +88,55 @@ export const Login = ()=>{
             >
                <div>
                    {/* close the login tab */}
-                   <div className = {styles.top_box}>
-                   <div>
                    <IconButton aria-label="close" style= {{float : "right"}} onClick = {()=>setOpen(false)}>
                         <CloseIcon fontSize="small" />
                     </IconButton>
-                    <div className = {styles.login_heading}> Login </div>
-                   </div>
-                   <div>
+                    <Typography className = {classes.root}  variant="h4"> Login </Typography>
+               
+               </div>
+                <div style= {{textAlign : "center"}}>
                     {/* login with the faceBook  or Google */}
-                    <div>
-                        <button className = {styles.button}><img src="https://www.flaticon.com/svg/static/icons/svg/145/145802.svg" alt="" style = {{height:20}}/>  Facebook</button>
-                        <button className = {styles.button} ><img src="https://www.flaticon.com/svg/static/icons/svg/2702/2702602.svg" alt="" style = {{height:20}}/> Google</button>
+                    <div style= {{marginTop:50}}>
+                        <Button className = {classes.button} variant="contained"><img src="https://www.flaticon.com/svg/static/icons/svg/145/145802.svg" alt="" style = {{height:20}}/>  Facebook</Button>
+                        <Button className = {classes.button} variant="contained"><img src="https://www.flaticon.com/svg/static/icons/svg/2702/2702602.svg" alt="" style = {{height:20}}/> Google</Button>
                     </div>
                     
                     
-                    <div className = {styles.activity}> All your activity will remain private. </div>
+                    <Typography  variant="h12"> All your activity will remain private. </Typography>
                 </div>
-                   </div>
-               </div>
                 
                 <Divider/>
                 {/* Required credentials to login*/}
                {
                log ?  (<div>
                     <form className = {classes.input}>
-                        <div className = {styles.bottom_box} >
-                            <div className = {styles.email_heading} >Email ID / Username</div>
-                            <input
-                            label="Email"
-                            className = {styles.email_input}
+                        <div   style = {{marginTop : 30}}>
+                            <h3 style = {{marginLeft : 30}}><label htmlFor="email">Email</label></h3>
+                            <TextField required
+                            label="Email" variant="filled" 
+                            className = {classes.input}
                             type = "email"
                             value = {email}
-                            placeholder = "Enter your active Email ID / Username"
                             onChange = {(e)=>setEmail(e.target.value)}
+                            style = {{marginLeft : 30}}
                             /> 
                         </div>
-                        <div className = {styles.bottom_box1}>
-                            <div className = {styles.email_heading}>Password</div>
-                            <input
-                            label="password"
-                            className = {styles.email_input}
+                        <div style = {{marginTop : 30}}>
+                            <h3 style = {{marginLeft : 30}}><label htmlFor="password">Password</label></h3>
+                            <TextField required
+                            label="password" variant="filled" 
+                            className = {classes.input}
                             type = "password"
                             value = {password}
-                            placeholder = "Enter your password"
                             onChange = {(e)=>setPassword(e.target.value)}
+                            style = {{marginLeft : 30}}
                             /> 
                         </div>
-                    <div className = {styles.forget}> Forgot Password?</div>
+                    <Typography style= {{float : "right"}} variant="h9"> ForgotPassword?</Typography>
                     {/* submit credentials */}
-                    <button className = {styles.submit} onClick= {handleLogin} >
+                    <Button className = {classes.root} variant="contained" color="primary" onClick= {handleLogin} >
                         Login
-                    </button>
+                    </Button>
 
                     
                     </form>
@@ -158,12 +147,12 @@ export const Login = ()=>{
                     {
                         error&&<div style = {{color: "red",textAlign:"center"}}>Wrong Credentilas</div>
                     }
-                    <div className = {styles.or} >
+                    <div style= {{textAlign : "center",marginTop:10}}>
                         or
                     </div>
-                    <button className = {styles.otp} onClick={()=>setLog(false)} >
+                    <Button className = {classes.root} style = {{border: "1px solid blue",color: "blue"}} onClick={()=>setLog(false)} >
                         Use OTP To Login
-                    </button>
+                    </Button>
                 </div>):
                 (
                     <div>
@@ -189,7 +178,7 @@ export const Login = ()=>{
                     
                     {/* if the credentials are wrong */}
                     {
-                        error&&<div style = {{color: "red",textAlign:"center"}}>Wrong Credentials</div>
+                        error&&<div style = {{color: "red",textAlign:"center"}}>Wrong Credentilas</div>
                     }
                     <div style= {{textAlign : "center",marginTop:10}}>
                         or
@@ -199,9 +188,10 @@ export const Login = ()=>{
                     </Button></div>
                 )}
 
-                <div className = {styles.last_box}>
-                    <div className = {styles.naukri} > New to Naukari?</div>
-                    <div className = {styles.registerfree} > Register for free</div>
+                <div style= {{textAlign : "center",marginTop:10}}>
+                    <Typography  variant="h9"> New to Naukari?</Typography>
+                    {/* for New Registrations */}
+                    <Typography  variant="h9" style = {{color: "blue"}}> Register for free</Typography>
                 </div>
                 
             </Drawer>
