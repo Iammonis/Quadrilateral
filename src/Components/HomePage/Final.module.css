@@ -1,0 +1,31 @@
+.fullpage {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav {
+    margin-bottom: 100px;
+    position: absolute;
+}
+
+.search {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.bottombox {
+    display: flex;
+    flex-direction: row;
+    padding: 60px;
+}
+
+.bottomleft {
+    display: flex;
+    flex-direction: column;
+}
+
+.bottomleft_down {
+    display: flex;
+    flex-direction: row;
+    padding-left: 20px;
+}

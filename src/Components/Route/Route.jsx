@@ -11,7 +11,7 @@ const Router=()=>{
         <div>
             <Route path= "/"  exact render = {()=><SearchBar/>}/>
             <Route path='/login' exact  render={()=><Login/>} />
-            <Route path="/user/:id"  render = {(props)=><UserPage{...props}/>}/>
+            <Route path="/user/:id"  render = {(props) => <UserPage {...props}/>}/>
             <Route path = "/search" exact render = {()=><SearchPage/>}/>
         </div>
     )

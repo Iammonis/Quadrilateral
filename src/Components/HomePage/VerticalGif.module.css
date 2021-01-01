@@ -1,0 +1,18 @@
+.box {
+    border: 1px solid #edf3fa;
+    box-shadow: 2px 2px 2px 2px #EDF3FA;
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.box > div {
+    color: rgb(63, 63, 63);
+    font-weight: 600;
+}
+
+.box > img {
+    margin: 10px 30px;
+}
