@@ -25,11 +25,11 @@ export function SearchBar() {
             history.push(`/search${url}`) 
         }
         else if( searchText === "" && searchLoc !== "" ){
-            let url = `?location.${searchLoc}=true`
+            let url = `?location_like=${searchLoc}`
             history.push(`/search${url}`)
         }
         else if( searchText !== "" && searchLoc !== "" ){
-            let url = `?title_like=${searchText}&location.${searchLoc}=true`
+            let url = `?title_like=${searchText}&location_like=${searchLoc}`
             history.push(`/search${url}`)
         }
     } 
