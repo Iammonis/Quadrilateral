@@ -5,8 +5,8 @@ import { Login } from './Components/Login';
 import { Register } from './Components/Recruiter/Register/Register';
 import {  Router } from './Components/Route/Route';
 import { UserPage } from './Components/UserPage/UserPage';
+import { UserPostCard } from './Components/UserPage/UserPostCard';
 import { store } from './Redux/store';
-
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
       {/* <Login/> */}
       {/* <Login/> */}
       {/* <UserPage/> */}
+      {/* <UserPostCard/> */}
     </div>
     </Provider>
   );
