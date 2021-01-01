@@ -19,10 +19,19 @@ export function SearchBar() {
     const history = useHistory()
 
     const handleSearch = () => {
-        if(searchText!==""||searchLoc!==""){
-           history.push("/search") 
+
+        if( searchText !== "" && searchLoc === "" ){
+            let url = `?title_like=${searchText}`
+            history.push(`/search${url}`) 
         }
-        
+        else if( searchText === "" && searchLoc !== "" ){
+            let url = `?location.${searchLoc}=true`
+            history.push(`/search${url}`)
+        }
+        else if( searchText !== "" && searchLoc !== "" ){
+            let url = `?title_like=${searchText}&location.${searchLoc}=true`
+            history.push(`/search${url}`)
+        }
     } 
     const Skills = !searchText
     ? people

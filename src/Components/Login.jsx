@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Typography, Drawer, Divider,TextField,Button,IconButton} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import CloseIcon from '@material-ui/icons/Close';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchLoginData } from '../Redux/LoginRedux/loginAction';
 import styles from "./Login.module.css"
@@ -53,16 +53,25 @@ export const Login = ()=>{
     const dispatch = useDispatch()
     const [error,setError] = useState(false)
     const [isAuth,setIsAuth] = useState(false)
+    const history = useHistory()
 
     React.useEffect(()=>{
         dispatch(fetchLoginData())
     },[])
     
-    const handleLogin=()=>{
-        
-       const item = data.map((item)=>(item.email==email && item.password == password) ? (true):(false) )
+    const handleLogin=(e)=>{
+        e.preventDefault()
+       const item = data.map((item)=>(item.email==email && item.password == password) ? (1):(0) )
         console.log(item)
-        if( item[0]){
+        const card = data.find((item)=>(item.email==email && item.password == password) )
+        console.log(card)
+        var count =0
+        for(var i=0;i<item.length;i++){
+            if(item[i]==1){
+                count++
+            }
+        }
+        if( count==1){
             setError(false)
             setIsAuth(true)
         }
@@ -72,6 +81,7 @@ export const Login = ()=>{
             setEmail("")
             setPassword("")
         }
+        isAuth && history.push(`/user/${card.id}`)
 
     }
     return(
