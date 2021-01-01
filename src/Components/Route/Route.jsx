@@ -1,17 +1,19 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 import { Login } from '../Login'
-import { SearchPage } from '../../Components/SearchPage/SearchPage'
-import { SearchBar } from '../../Components/SearchBar/SearchBar'
+import { SearchBar } from '../SearchBar/SearchBar'
+import { SearchPage } from '../SearchPage/SearchPage'
+import { UserPage } from '../UserPage/UserPage'
 
 
 const Router=()=>{
     return(
-        <Switch>
-            <Route path='/' exact render={ ()=><SearchBar />} />
-            <Route path='/login' exact render={ ()=><Login />} />
-            <Route path='/search' exact render={ ()=><SearchPage />} />
-        </Switch>
+        <div>
+            <Route path= "/"  exact render = {()=><SearchBar/>}/>
+            <Route path='/login' exact  render={()=><Login/>} />
+            <Route path="/user/:id"  render = {(props)=><UserPage{...props}/>}/>
+            <Route path = "/search" exact render = {()=><SearchPage/>}/>
+        </div>
     )
 }
 export {Router}
