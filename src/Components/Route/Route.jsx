@@ -8,12 +8,12 @@ import { UserPage } from '../UserPage/UserPage'
 
 const Router=()=>{
     return(
-        <div>
+        <Switch>
             <Route path= "/"  exact render = {()=><SearchBar/>}/>
             <Route path='/login' exact  render={()=><Login/>} />
             <Route path="/user/:id"  render = {(props) => <UserPage {...props}/>}/>
             <Route path = "/search" exact render = {()=><SearchPage/>}/>
-        </div>
+        </Switch>
     )
 }
 export {Router}
