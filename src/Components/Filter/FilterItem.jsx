@@ -21,12 +21,10 @@ const useStyles = makeStyles(theme => ({
     }
 }))
 
-const FilterItem = ({headerName, filterName})=>{
+const FilterItem = ({headerName, filterName, handleURL})=>{
     const classes = useStyles();
-    console.log(headerName  )
     return(
         <>
-            
             <Accordion>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
@@ -40,7 +38,7 @@ const FilterItem = ({headerName, filterName})=>{
                         
                         filterName?.map(item=>(
                             <div className={classes.filterItems}>
-                                <input type="checkbox"/>
+                                <input onChange={ e => handleURL(e.target.checked, item) } type="checkbox"/>
                                 <Typography key={item} value={item}>{item}</Typography>
 
                             </div>
