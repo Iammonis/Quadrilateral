@@ -4,6 +4,7 @@
     width: 320px;
     padding: 20px;
     height: 300px;
+    margin-top: 20px;
 }
 
 .top {
@@ -73,4 +74,40 @@
     border-radius: 2px;
     border: .5px solid #4A90E2;
     letter-spacing: -.1px;
+}
+
+.logos {
+    font-size: 11px;
+    font-weight: 700;
+    color: black;
+    display: flex;
+    flex-direction: row;
+}
+
+.logos > div {
+    margin-top: 15px;
+}
+
+.logos > img {
+    width: 20px;
+    margin: 10px;
+}
+
+.greytext {
+    color: grey;
+    font-size: 10px;
+    padding: 10px 10px 0px 10px
+}
+
+.bluetext {
+    font-size: 12px;
+    font-weight: 700;
+    color: #4A90E2;
+    margin-top: 40px;
+}
+
+.bluetext1 {
+    font-size: 12px;
+    font-weight: 500;
+    color: #4A90E2;
 }

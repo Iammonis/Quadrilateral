@@ -1,5 +1,6 @@
 import { Provider } from 'react-redux';
 import './App.css';
+import { FinalHome } from './Components/HomePage/FinalHome';
 import { HorizontalGif } from './Components/HomePage/HorizontalGif';
 import { MiddleBox } from './Components/HomePage/MiddleBox';
 import { RightBox1 } from './Components/HomePage/RightBox1';
@@ -13,15 +14,7 @@ function App() {
   return (
     <Provider store= {store}>
     <div className="App">
-      <h1>New Project</h1>
-      
-      <SearchBar/>
-      <Router/>
-      <RightBox1/>
-      <VerticalGif2/>
-      <VerticalGif/>
-      <HorizontalGif/>
-      <MiddleBox/>
+      <FinalHome/>
     </div>
     </Provider>
   );
