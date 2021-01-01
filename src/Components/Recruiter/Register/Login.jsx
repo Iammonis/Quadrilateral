@@ -2,6 +2,10 @@ import { useState } from 'react'
 import { Navbar } from '../Navbar'
 import { Footer } from '../Footer'
 import { makeStyles } from '@material-ui/core/styles'
+import { useDispatch, useSelector } from 'react-redux'
+import React from 'react'
+import { loginRegisterData } from '../../../Redux/RecruiterRegister/LoginRegister/loginRegisterAction'
+import { useHistory } from 'react-router-dom'
 
 const useStyles = makeStyles({
     root: ({
@@ -157,9 +161,38 @@ export const Login = () => {
     const [email, setEmail] = useState('') 
     const [password, setPassword] = useState('') 
     const classes = useStyles()
+    const dispatch = useDispatch()
+    const loginData = useSelector((state)=>state.logReg.loginData)
+    const [isAuth,setIsAuth] = useState(false)
+    const [error,setError] = useState(false)
+    const history = useHistory()
 
-    const handleSubmit = () => {
+    React.useEffect(()=>{
+        dispatch(loginRegisterData())
+    },[loginData])
 
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        const item = loginData.map((item)=>(item.email==email && item.company_name == password) ? (1):(0) )
+        console.log(item)
+        // console.log(loginData)
+        var count =0
+        for(var i=0;i<item.length;i++){
+            if(item[i]==1){
+                count++
+            }
+        }
+        if( count==1){
+            setError(false)
+            setIsAuth(true)
+        }
+        else {
+            setError(true)
+            setIsAuth(false)
+            setEmail("")
+            setPassword("")
+        }
+        isAuth && history.push("/recruiter")
     }
 
     return (
@@ -180,7 +213,7 @@ export const Login = () => {
                         <div className='forms'>
                             {
                                 !loginTab ? 
-                                <form className='sales-tab'>
+                                (<form className='sales-tab'>
                                     <input placeholder='Name' type="text"/>
                                     <input placeholder='Contact Number' type="text"/>
                                     <input placeholder='Company name' type="text"/>
@@ -191,11 +224,11 @@ export const Login = () => {
                                         <option value="">I am a job seeker</option>
                                     </select>
                                     <button>Submit Enquiry</button>
-                                </form> :
-                                <form className='login-tab'>
+                                </form>) :
+                                (<form className='login-tab'>
                                     <input onChange={ e => setEmail(e.target.value) } value={email} placeholder="Registered Email ID" type="text"/>
                                     <input onChange={ e => setPassword(e.target.value) } value={password} placeholder="Password" type="text"/>
-                                    <button>Login</button>
+                                    <button onClick = {handleSubmit}>Login</button>
                                     <a className='forgot-pass' href="#">Forgot Password ?</a>
                                     <p>Keep your account safe. <a href="#">Learn How</a></p>
                                     <div style={{width:'100%', display:'flex', justifyContent:'space-between'}}>
@@ -206,7 +239,7 @@ export const Login = () => {
                                         <p className='client-para'>Are you a new client ?</p>
                                         <button id='reg-btn'>Register Now</button>
                                     </div>
-                                </form>
+                                </form>)
                             }
                         </div>
                     </div>

@@ -10,7 +10,7 @@ const useStyles = makeStyles({
         height: "70px",
         background: hidden ? "white" : "transparent",
         color: hidden ? "#666" : "white",
-        position: "fixed",
+        position: "sticky",
         top:0,
         zIndex: hidden ? "100" : "100" ,
         display: 'flex',
@@ -241,8 +241,8 @@ const useStyles = makeStyles({
     })
 })
 
-export const Navbar = () => {
-    const [hidden, setHidden] = useState(false)
+export const Navbar = ({hide = false}) => {
+    const [hidden, setHidden] = useState(hide)
     const classes = useStyles(hidden)
     
     const handleScroll = () => {
@@ -255,7 +255,7 @@ export const Navbar = () => {
     }
 
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll)
+        hide === false && window.addEventListener('scroll', handleScroll)
         return () => {
             window.removeEventListener('scroll', handleScroll)
         }
@@ -268,7 +268,7 @@ export const Navbar = () => {
                 <div className={classes.links}>
                     <div className='nav-link jobs'>
                         <p>JOBS</p>
-                        <div class="jobs-dropdown dropdown">
+                        <div className="jobs-dropdown dropdown">
                             <div>
                                 <a target="_blank" href="#"  >Search Jobs</a>
                                 <a target="_blank" href="#">Advanced Search</a>
@@ -287,7 +287,7 @@ export const Navbar = () => {
                     </div>
                     <div className='nav-link recruiters'>
                         <p>RECRUITERS</p>
-                        <div class="recruiters-dropdown dropdown">
+                        <div className="recruiters-dropdown dropdown">
                             <a target="_blank" href="https://www.naukri.com/recruiters/browse-all-recruiters"  >Browse All Recruiters</a>
                             <a target="_blank" href="https://resume.naukri.com/contact-recruiters-hr?fftid=GNB_RC"  >Recruiter Connection</a>
                             <a target="_blank" href="https://naukrirecruiter.naukri.com?src=128"  >Go to NaukriRecruiter</a>
@@ -295,7 +295,7 @@ export const Navbar = () => {
                     </div>
                     <div className='nav-link companies'>
                         <p>COMPANIES</p>
-                        <div class="companies-dropdown dropdown">
+                        <div className="companies-dropdown dropdown">
                             <a target="_blank" href="#"  >Browse All Companies</a>
                             <a target="_blank" href="#"  >About Companies</a>
                             <a target="_blank" href="#"  >Interview Questions</a>
@@ -307,7 +307,7 @@ export const Navbar = () => {
                     </div>
                     <div className='nav-link tools'>
                         <p>TOOLS</p>
-                        <div class="tools-dropdown dropdown">
+                        <div className="tools-dropdown dropdown">
                             <a target="_blank" href="#"  >Career Dashboard</a>
                             <a target="_blank" href="#"  >Industry Trends</a>
                             <a target="_blank" href="#"  >Naukri Lab</a>
@@ -315,7 +315,7 @@ export const Navbar = () => {
                     </div>
                     <div className='nav-link services'>
                         <p>SERVICES</p>
-                        <div class="services-dropdown dropdown">
+                        <div className="services-dropdown dropdown">
                                     <div>
                                         <h3>
                                             Resume Writing
@@ -353,11 +353,11 @@ export const Navbar = () => {
                                             Resume Display
                                         </a>
                                         <a target="_blank" href="#" >
-                                            <span class="newStatus"></span>
+                                            <span className="newStatus"></span>
                                             RecruiterConnection
                                         </a>
                                         <a target="_blank" href="#" >
-                                            <span class="newStatus"></span>
+                                            <span className="newStatus"></span>
                                             Priority Applicant
                                         </a>
                                         <h3>
@@ -427,7 +427,7 @@ export const Navbar = () => {
                     </div>
                     <div className='nav-link more'>
                         <p>MORE</p>
-                        <div class="more-dropdown dropdown">
+                        <div className="more-dropdown dropdown">
                             <h3>
                                 Career Tools
                             </h3>
@@ -452,7 +452,7 @@ export const Navbar = () => {
                     </div>
                     <div className='emp-login emp'>
                         <p>FOR EMPLOYEES</p>
-                        <div class="emp-dropdown dropdown">
+                        <div className="emp-dropdown dropdown">
                             <a target="_blank" href="#"  >Buy Online</a>
                             <a target="_blank" href="#"  >Employee Login</a>
                         </div>
