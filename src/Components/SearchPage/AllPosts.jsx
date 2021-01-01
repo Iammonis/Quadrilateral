@@ -2,7 +2,6 @@ import React from 'react'
 import { PostCard } from './PostCard'
 import { useSelector } from 'react-redux'
 
-
 export const AllPosts = ({freshness, sliderValue}) => {
     const allPosts = useSelector( state => state.filter1.allPosts )
     
