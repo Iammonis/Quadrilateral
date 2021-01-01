@@ -13,12 +13,15 @@ const getPostsSuccess = payload => ({
 const getPostsFailure = () => ({
     type: GET_POSTS_FAILURE
 })
-// https://quadrilateral-naukri.herokuapp.com/posts?q=
+
 
 export const getAllPosts = url => dispatch => {
     dispatch( getPostsReq() )
     console.log(url)
     return axios.get(`https://quadrilateral-naukri.herokuapp.com/posts${url}`)
-    .then( res => dispatch( getPostsSuccess(res.data) ) )
+    .then( res => {
+        console.log(res.data)
+        return dispatch( getPostsSuccess(res.data) )
+    } )
     .catch( err => dispatch( getPostsFailure(err) ) )
 }

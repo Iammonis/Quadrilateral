@@ -1,14 +1,14 @@
-import React from 'react';
+import { useState } from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import {Typography, Accordion,AccordionSummary,AccordionDetails} from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { useLocation } from 'react-router-dom'
 
 const useStyles = makeStyles(theme => ({
     filterItems:{
         display: "flex",
         '& input':{
             margin: "5px 10px 0px",
-
         }
     },
     heading: {
@@ -23,6 +23,8 @@ const useStyles = makeStyles(theme => ({
 
 const FilterItem = ({headerName, filterName, handleURL})=>{
     const classes = useStyles();
+    const location = useLocation()
+
     return(
         <>
             <Accordion>
@@ -35,18 +37,15 @@ const FilterItem = ({headerName, filterName, handleURL})=>{
             </AccordionSummary>
                 <AccordionDetails className={classes.AccordionDetails}>
                     {
-                        
-                        filterName?.map(item=>(
-                            <div className={classes.filterItems}>
-                                <input onChange={ e => handleURL(e.target.checked, item) } type="checkbox"/>
+                        filterName?.map( item =>{
+                            return <div className={classes.filterItems}>
+                                <input checked={ location.search.includes(item) } onChange={ e => handleURL(e, item, headerName) } type="checkbox"/>
                                 <Typography key={item} value={item}>{item}</Typography>
-
                             </div>
-                        ))
+                        })
                     }
                 </AccordionDetails>
             </Accordion>
-          
         </>
     )
 }
