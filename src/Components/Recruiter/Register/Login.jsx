@@ -169,11 +169,13 @@ export const Login = () => {
 
     React.useEffect(()=>{
         dispatch(loginRegisterData())
-    },[loginData])
+    },[])
 
     const handleSubmit = (e) => {
         e.preventDefault()
         const item = loginData.map((item)=>(item.email==email && item.company_name == password) ? (1):(0) )
+        const check = loginData.find((item)=>item.email==email && item.company_name == password)
+        console.log(check)
         console.log(item)
         // console.log(loginData)
         var count =0
@@ -192,7 +194,7 @@ export const Login = () => {
             setEmail("")
             setPassword("")
         }
-        isAuth && history.push("/recruiter")
+        isAuth && history.push(`/recruiter/${check.id}`)
     }
 
     return (
