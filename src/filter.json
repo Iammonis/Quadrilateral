@@ -1,0 +1,10 @@
+{
+    "Freshness":["Last 30 days","Last 15 days", "Last 7 days", "Last 3 days","Last 1 day"],
+    "Location": ["Bhopal","Bengaluru", "Mumbai", "Indore", "Delhi","Noida", "Nagpur", "Ahmedabad","Pune"],
+    "Salary" : ["0-3 Lakhs", "3-6 Lakhs", "6-10 Lakhs", "10-15 Lakhs","15-25 Lakhs"],
+    "Job_type" : ["International", "Premium Engg", "Walk-in","All Jobs"],
+    "Posted_by": ["Company Jobs", "Consultant Jobs"],
+    "Top_companies": ["Accenture", "IBM India", "TCS", "Oracle","Flipkart","Myntra Design"],
+    "Education" : ["Post Graduation", "M.Tech", "B.Tech/B.E.", "MBA", "B.Ed", "B.Sc"],
+    "Industries":["IT-Software", "Banking", "Media", "Advertising", "Recruitment","Education", "IT-Hardware"] 
+}

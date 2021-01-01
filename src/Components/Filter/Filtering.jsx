@@ -1,10 +1,10 @@
-import React from 'react';
+import { useState } from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import {Typography, Slider} from '@material-ui/core';
-import filter from '../filter.json'
+import filter from '../../filter.json'
 import {FilterItem} from './FilterItem'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles( theme => ({
     experience:{
         width: 200
     },
@@ -25,11 +25,26 @@ const valuetext = (value) =>{
 
 const Filtering = ()=>{
     const classes = useStyles();
-    const [freshness, setFreshness] = React.useState("");
+    const [freshness, setFreshness] = useState("");
+    
+
+    const handleURL = ( e, str ) => {
+        if(!e){
+            // setUrl( prev => prev.replace(`&${str}`,'') )
+            // console.log(e, str, url, 'checked')
+        }
+        else{
+            // setUrl( prev => prev + `&${str}` )
+            // console.log(e, str, url, 'not checked')
+        }
+    }
+
+    
 
      return(
         <div className={classes.root}>
             {/* experience slider */}
+            
             <div className={classes.experience}>
                 <Typography className={classes.typography}>
                     Experience
@@ -58,17 +73,15 @@ const Filtering = ()=>{
                         ))
                     }
                 </select>
-
             </div>
-            <FilterItem headerName="Location" filterName={filter.Location}/>
-            <FilterItem headerName="Salary" filterName={filter.Salary}/>
-            <FilterItem headerName="Job Type" filterName={filter.Job_type}/>
-            <FilterItem headerName="Posted by" filterName={filter.Posted_by}/>
-            <FilterItem headerName="Top Companies" filterName={filter.Top_componies}/>
-            <FilterItem headerName="Education" filterName={filter.Education}/>
-            <FilterItem headerName="Industries" filterName={filter.Industries}/>
+            <FilterItem handleURL={ handleURL } headerName="Location" filterName={filter.Location}/>
+            <FilterItem handleURL={ handleURL } headerName="Salary" filterName={filter.Salary}/>
+            <FilterItem handleURL={ handleURL } headerName="Job Type" filterName={filter.Job_type}/>
+            <FilterItem handleURL={ handleURL } headerName="Posted by" filterName={filter.Posted_by}/>
+            <FilterItem handleURL={ handleURL } headerName="Top Companies" filterName={filter.Top_componies}/>
+            <FilterItem handleURL={ handleURL } headerName="Education" filterName={filter.Education}/>
+            <FilterItem handleURL={ handleURL } headerName="Industries" filterName={filter.Industries}/>
 
-            
         </div>
     )
 }
