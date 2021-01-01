@@ -16,7 +16,6 @@ export const reducer = (state = initState, {type, payload}) => {
         }
         
         case GET_POSTS_SUCCESS: {
-            console.log(payload)
             return {
                 ...state,
                 loading: false,

@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import styles from "./SearchBar.module.css"
+import styles from "./SearchBox.module.css"
 import SearchIcon from '@material-ui/icons/Search';
 import RoomIcon from '@material-ui/icons/Room';
 import { Room } from "@material-ui/icons";
-import skills from "./skills.json"
-import location from "./location.json"
+import skills from "../SearchBar/skills.json"
+import location from "../SearchBar/location.json"
 import { Redirect, useHistory } from "react-router-dom";
 
 const people = [...skills];
 const places = [...location]
 
 
-export function SearchBar() {
+export function SearchBox() {
     const [searchText, setSearchText] = useState("")
     const [searchLoc, setSearchLoc] = useState("")
     const [open,setOpen] = useState(true)
@@ -25,11 +25,11 @@ export function SearchBar() {
             history.push(`/search${url}`) 
         }
         else if( searchText === "" && searchLoc !== "" ){
-            let url = `?location_like=${searchLoc}`
+            let url = `?location.${searchLoc}=true`
             history.push(`/search${url}`)
         }
         else if( searchText !== "" && searchLoc !== "" ){
-            let url = `?title_like=${searchText}&location_like=${searchLoc}`
+            let url = `?title_like=${searchText}&location.${searchLoc}=true`
             history.push(`/search${url}`)
         }
     } 
@@ -48,7 +48,6 @@ export function SearchBar() {
         <div className = {styles.bigbox}>
             <div className = {styles.box}>
                 <div className = {styles.left}>
-                    <div className = {styles.left_top}> Find a job at India's No. 1 Job Site</div>
                     <div className = {styles.left_bottom}>
                         <div className = {styles.searchbar}>
                             <div className = {styles.searchbar_left}><SearchIcon/></div>
@@ -76,26 +75,11 @@ export function SearchBar() {
                         >Search</button>
                     </div>
                 </div>
-                <div className = {styles.mid}></div>
-                <div className = {styles.right}>
-                    <div className = {styles.right_top}>
-                        <div> Get Personalised Jobs !! </div>
-                        <div className = {styles.right_bottom_div}> Tell us what kind of a job you are looking out for and stay updated with latest opportunities. </div>
-                    </div>
-                    <div className = {styles.right_bottom}>
-                        <div className = {styles.right_bottom_register}>
-                        <button className = {styles.right_bottom_register_btn}>Register for free</button>
-                        </div>
-                        <div className = {styles.right_bottom_upload}>
-                        <button className = {styles.right_bottom_upload_btn} > Upload CV</button>
-                        <div className = {styles.extra}>Max 2MB, doc, docx, rtf, pdf</div>
-                        </div>
-                    </div>
-                </div>
+               
             </div>
         <div>
             <div>    
-                { searchText === "" ? null : open && (searchText.length >1 &&Skills.map(item => (
+                { searchText == "" ? null : open && (searchText.length >1 &&Skills.map(item => (
                 <div onClick = {()=>{setSearchText(item)
                 setOpen(false)}
                 }>{item}</div>
@@ -103,12 +87,10 @@ export function SearchBar() {
                 }
             </div>
             <div>
-            { searchLoc === "" ? null : loc && (searchLoc.length > 1 &&Locations.map(item => (
+            { searchLoc == "" ? null : loc && (searchLoc.length >1 &&Locations.map(item => (
                 <div onClick = {()=>{setSearchLoc(item)
                 setLoc(false)}
-                }>
-                    {item}
-                </div>
+                }>{item}</div>
                 )))
                 }
             </div>
