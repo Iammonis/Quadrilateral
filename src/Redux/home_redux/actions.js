@@ -17,9 +17,6 @@ const getPostsFailure = () => ({
 export const getAllPosts = url => dispatch => {
     dispatch( getPostsReq() )
     return axios.get(`https://quadrilateral-naukri.herokuapp.com/posts${url}`)
-    .then( res => {
-        console.log(res.data)
-        return dispatch( getPostsSuccess(res.data) )
-    } )
+    .then( res => dispatch( getPostsSuccess(res.data) ) )
     .catch( err => dispatch( getPostsFailure(err) ) )
 }
