@@ -1,6 +1,6 @@
- [
+[
     {
-        "category": "info_tech",
+        "category": "Information Technology",
         "sub_categories": [
             {
                 "sub_category_name": "Analytics",
@@ -89,35 +89,6 @@
                 "text_names": [
                     {
                         "name": "Cotiviti India Private Limited"
-                    }
-                ]
-            },
-            {
-                "sub_category_name": "ITES/BPO/.COM",
-                "text_names": [
-                    {
-                        "name": "Capita India Pvt Ltd."
-                    },
-                    {
-                        "name": "CSS Corp"
-                    },
-                    {
-                        "name": "Elico Healthcare Services"
-                    },
-                    {
-                        "name": "ienergizer"
-                    },
-                    {
-                        "name": "Lennox International"
-                    },
-                    {
-                        "name": "McKinsey Global Services"
-                    },
-                    {
-                        "name": "SYKES"
-                    },
-                    {
-                        "name": "Williams LEA"
                     }
                 ]
             },
