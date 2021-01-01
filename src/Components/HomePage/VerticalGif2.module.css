@@ -1,0 +1,9 @@
+.box {
+    border: 1px solid #edf3fa;
+    box-shadow: 2px 2px 2px 2px #EDF3FA;
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    padding: 20px;
+    text-align: center;
+}
