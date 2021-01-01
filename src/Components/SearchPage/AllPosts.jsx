@@ -2,8 +2,6 @@ import React from 'react'
 import { PostCard } from './PostCard'
 import { useSelector } from 'react-redux'
 
-
-<<<<<<< HEAD
 export const AllPosts = ({freshness, sliderValue}) => {
     const allPosts = useSelector( state => state.filter1.allPosts )
     
@@ -21,15 +19,6 @@ export const AllPosts = ({freshness, sliderValue}) => {
         <div>
             {
                 filteredData.map( item => <PostCard key={item.id} items={item} /> )
-=======
-export const AllPosts = () => {
-    const allPosts = useSelector( state => state.filter1.allPosts )
-
-    return (
-        <div>
-            {
-                allPosts.map( item => <PostCard key={item.id} items={item} /> )
->>>>>>> 7c4d9a9... Employer auth (#24)
             }
         </div>
     )

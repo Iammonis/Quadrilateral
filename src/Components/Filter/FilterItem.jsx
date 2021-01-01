@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
 const FilterItem = ({headerName, filterName, handleURL})=>{
     const classes = useStyles();
     const location = useLocation()
-
+    
     return(
         <>
             <Accordion>
@@ -46,6 +46,7 @@ const FilterItem = ({headerName, filterName, handleURL})=>{
                     }
                 </AccordionDetails>
             </Accordion>
+
         </>
     )
 }
