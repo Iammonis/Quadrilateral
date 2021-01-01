@@ -14,7 +14,6 @@ const getPostsFailure = () => ({
     type: GET_POSTS_FAILURE
 })
 
-
 export const getAllPosts = url => dispatch => {
     dispatch( getPostsReq() )
     console.log(url)

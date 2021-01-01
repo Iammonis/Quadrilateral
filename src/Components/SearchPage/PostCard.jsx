@@ -48,15 +48,25 @@ export const PostCard = ({items}) => {
             <h2>{items.title}</h2>
             <p>{items.company_name}</p>
             <div className='info'>
+<<<<<<< HEAD
                 <p>0 to {items.experience} Years</p>
                 <p>{items.salary}</p>
                 <div className="location">{items.location.map( (location) => <p key="location"> {location}</p> )}</div>
+=======
+                <p>{items.experience.replace('to'," - ")} Years</p>
+                <p>{items.salary}</p>
+                <div className="location">{Object.keys(items.location).map( (location) => <p key="location"> {location}</p> )}</div>
+>>>>>>> 7c4d9a9... Employer auth (#24)
             </div>
             <div className='desc'>
                 {truncate(items.description, 8)} ...
             </div>
             <div className='keywords'>
+<<<<<<< HEAD
             {items.keywords.map( (keyword) => <p key="keyword">{keyword} </p> )}
+=======
+            {Object.keys(items.keywords).map( (keyword) => <p key="keyword">{keyword} </p> )}
+>>>>>>> 7c4d9a9... Employer auth (#24)
             </div>
 
             <div className='card-bottom'>
