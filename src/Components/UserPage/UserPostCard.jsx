@@ -32,13 +32,13 @@ export const UserPostCard =()=>{
 
     const handleItem =()=>{
         const items  = data.find((item)=>item.id === 0)
+        console.log(items)
          setItem(items)
         
     }
 
 
     React.useEffect(()=>{
-
         dispatch(getAllPosts(url))
         handleItem()
         console.log(data)
@@ -47,10 +47,9 @@ export const UserPostCard =()=>{
     const truncate = (str, no_words) => {
         return str.split(" ").splice(0,no_words).join(" ");
     }
-
     return(
         <>
-            <Paper className = {classes.root} elevation={3}>
+            { item.length !== 0 && <Paper className = {classes.root} elevation={3}>
                 <div className = {classes.div}>
                     <Typography variant = "h6">12 New Recommended Job(s)</Typography>
                 </div>
@@ -61,15 +60,15 @@ export const UserPostCard =()=>{
                 </div>
                 <div className = {classes.div}>
                     <img src="https://www.flaticon.com/svg/static/icons/svg/1063/1063376.svg" alt="" style = {{height :15}}/>
-                    --{item.experience} yeras
+                    --{item.experience} years
                 </div>
                 <div className ={classes.div} style = {{display: "flex"}} >
                     <img src="https://www.flaticon.com/svg/static/icons/svg/684/684809.svg" alt="" style = {{height :15}}/>
-                     __{Object.keys(item.location).map( (location) => <p key="location"> {location} , </p> )}
+                     __{item.location.map( (location) => <p key="location"> {location} , </p> )}
                 </div>
                 <div className ={classes.div} style = {{display: "flex"}}>
                     <img src="https://www.flaticon.com/svg/static/icons/svg/3056/3056378.svg" alt="" style = {{height :15}}/>
-                    __ {Object.keys(item.keywords).map( (keyword) => <p key="keyword">{keyword} ,  </p> )}
+                    __ {item.keywords.map( (keyword) => <p key="keyword">{keyword} ,  </p> )}
                 </div>
                 <div className ={classes.div}>
                     <img src="https://www.flaticon.com/premium-icon/icons/svg/3131/3131430.svg" alt="" style = {{height :15}}/>
@@ -88,7 +87,7 @@ export const UserPostCard =()=>{
                 <div style = {{display : 'flex',flexDirection: 'row-reverse',margin:30}}>
                     <Typography variant = "h6" color = 'primary'>View All</Typography>
                 </div>{/* */}
-            </Paper>
+            </Paper>}
 
         </>
     )

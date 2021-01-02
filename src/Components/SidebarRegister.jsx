@@ -2,6 +2,7 @@ import React from "react";
 import { IconButton, Button, Typography, Box, Card, CardContent } from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
 import { makeStyles } from "@material-ui/core/styles";
+import { useHistory } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
   closeicon: {
@@ -34,6 +35,8 @@ const useStyles = makeStyles((theme) => ({
 
 const SidebarRegister = ({ handleDrawerClose }) => {
   const classes = useStyles();
+  const history = useHistory()
+
   return (
     <div>
       <div className={classes.closeicon}>
@@ -41,7 +44,7 @@ const SidebarRegister = ({ handleDrawerClose }) => {
           <CloseIcon />
         </IconButton>
       </div>
-      <div style={{ height: "90%", textAlign:"center",padding:"30px 0" }}>
+      <div style={{ height: "90%", textAlign:"center",padding:"10px 0" }}>
           <Typography variant="h6">
                 Tell us your Work Status
           </Typography>
@@ -51,7 +54,7 @@ const SidebarRegister = ({ handleDrawerClose }) => {
             src="https://static.naukimg.com/s/7/0/assets/images/src/widgets/register-wdgt/v0/assets/briefcase.849f45f9.png"
             alt="imgExperience"
           />
-          <Button className={classes.button} variant="contained" color="primary">
+          <Button onClick={ () => history.push('/register') } className={classes.button} variant="contained" color="primary">
             I am Experienced
           </Button>
           <Typography className={classes.typography}>I have at least 1 month of work experience</Typography>
@@ -63,7 +66,7 @@ const SidebarRegister = ({ handleDrawerClose }) => {
             src="https://static.naukimg.com/s/7/0/assets/images/src/widgets/register-wdgt/v0/assets/bagpack.89c75851.png"
             alt="bag"
           />
-          <Button className={classes.button} variant="contained" color="primary" href="#contained-buttons">
+          <Button onClick={ () => history.push('/register') } className={classes.button} variant="contained" color="primary" href="#contained-buttons">
             I am Fresher
           </Button>
           <Typography className={classes.typography}>

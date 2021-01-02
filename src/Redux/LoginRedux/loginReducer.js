@@ -3,7 +3,8 @@ import { LOGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCCESS } from "./loginActionType";
   
  const initState = {
     data:[],
-    loading: false
+    loading: false,
+    isAuth: false
   };
   
   export const loginReducer = (state = initState, { type, payload }) => {
@@ -19,7 +20,8 @@ import { LOGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCCESS } from "./loginActionType";
         return {
           ...state,
           loading: false,
-          data: [...payload]
+          data: [...payload],
+          isAuth: true
         };
       }
   

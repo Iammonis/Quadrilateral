@@ -239,7 +239,7 @@ export const Login = () => {
                                     </div>
                                     <div id='form-bot'> 
                                         <p className='client-para'>Are you a new client ?</p>
-                                        <button id='reg-btn'>Register Now</button>
+                                        <button onClick={ () => history.push( '/employee-register' ) } id='reg-btn'>Register Now</button>
                                     </div>
                                 </form>)
                             }
