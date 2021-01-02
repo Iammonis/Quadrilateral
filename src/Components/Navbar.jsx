@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import bell from '../assets/bell.png'
 import white from '../assets/white-bell.png'
 
@@ -241,7 +241,7 @@ const useStyles = makeStyles({
     })
 })
 
-export const Navbar = ({hide = false}) => {
+export const Navbar = ({hide = false, setLoginOpen}) => {
     const [hidden, setHidden] = useState(hide)
     const classes = useStyles(hidden)
     
@@ -273,7 +273,7 @@ export const Navbar = ({hide = false}) => {
                                 <a target="_blank" href="#"  >Search Jobs</a>
                                 <a target="_blank" href="#">Advanced Search</a>
                                 <a target="_blank" href="#"  >Create Free Job Alert</a>
-                                <a target="_blank" href="#"  >Register Now</a>
+                                <Link to='/register' >Register Now</Link>
                             </div>    
                             <div>
                                 <a target="_blank" href="#"  >Jobs by Location</a>
@@ -443,7 +443,7 @@ export const Navbar = ({hide = false}) => {
                         </div>
                     </div>
                     <div className='nav-link'>
-                        <p>LOGIN</p>
+                        <p onClick={ () => setLoginOpen(prev => !prev) }>LOGIN</p>
                     </div>
                 </div>
                 <div className={classes.employee}>
@@ -454,7 +454,7 @@ export const Navbar = ({hide = false}) => {
                         <p>FOR EMPLOYEES</p>
                         <div className="emp-dropdown dropdown">
                             <a target="_blank" href="#"  >Buy Online</a>
-                            <a target="_blank" href="#"  >Employee Login</a>
+                            <Link to="/employee-login" >Employee Login</Link>
                         </div>
                     </div>
                 </div>

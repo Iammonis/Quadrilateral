@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
       display: "flex",
       marginLeft: 30,
       width : 300,
-      marginTop : 30
+      marginTop : 30,
     },
     input :{
         width : 300,
@@ -21,7 +21,8 @@ const useStyles = makeStyles((theme) => ({
         
     },
     button : {
-        marginLeft: 20
+        marginLeft: 20,
+        cursor:'pointer'
     },
     drawer: {
       width: drawerWidth,
@@ -42,17 +43,18 @@ const useStyles = makeStyles((theme) => ({
     
     
   }));
-export const Login = ()=>{
+export const Login = ({open, setOpen})=>{
     const classes = useStyles();
-    const [open,setOpen]=useState(false)
+    
     const [log,setLog] = useState(true)
     const [email,setEmail] = useState("")
     const [password,setPassword] = useState("")
     const [mobile,setMobile] = useState("")
     const data = useSelector((state)=>state.log.data)
+    const isAuth = useSelector((state)=>state.log.isAuth)
     const dispatch = useDispatch()
     const [error,setError] = useState(false)
-    const [isAuth,setIsAuth] = useState(false)
+    // const [isAuth,setIsAuth] = useState(false)
     const history = useHistory()
 
     React.useEffect(()=>{
@@ -73,22 +75,20 @@ export const Login = ()=>{
         }
         if( count==1){
             setError(false)
-            setIsAuth(true)
+            // setIsAuth(true)
         }
         else {
             setError(true)
-            setIsAuth(false)
+            // setIsAuth(false)
             setEmail("")
             setPassword("")
         }
-        isAuth && history.push(`/user/${card.id}`)
+        isAuth && history.push(`/dashboard/${card.id}`)
 
     }
     return(
         <>
         
-        <Link to="/login">
-            <h2 className = {styles.login_heading} onClick = {()=>setOpen(!open)}>Login</h2></Link>
             <Drawer
             className={classes.drawer}
             variant="persistent"
@@ -205,7 +205,7 @@ export const Login = ()=>{
 
                 <div className = {styles.last_box}>
                     <div className = {styles.naukri} > New to Naukari?</div>
-                    <div className = {styles.registerfree} > Register for free</div>
+                    <div onClick={ () => history.push('/register') } className = {styles.registerfree} > Register for free</div>
                 </div>
                 
             </Drawer>

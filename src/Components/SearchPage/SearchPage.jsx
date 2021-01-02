@@ -6,11 +6,18 @@ import { makeStyles } from '@material-ui/core'
 import { getAllPosts } from '../../Redux/home_redux/actions'
 import { useDispatch, useSelector } from 'react-redux'
 import { useLocation, useHistory } from 'react-router-dom'
+import { Companies } from '../Dashboard/Companies'
+import { FaqCard } from '../Dashboard/FaqCard'
 
 const useStyles = makeStyles({
     root: () => ({
         width:'100%',
         background:'#FAFAFA',
+
+        '& .right-side':{
+            display:'flex',
+            flexDirection:'column'
+        },
 
         '& .mid': {
             display:'flex',
@@ -86,6 +93,10 @@ export const SearchPage = () => {
             <div className='mid'>
                 <Filtering setSliderValue={setSliderValue} setFreshness={setFreshness} freshness={freshness} addToUrl={addToUrl} />
                 <AllPosts sliderValue={sliderValue} freshness={freshness}/>
+                <div className='right-side'>
+                    <Companies />
+                    <FaqCard />
+                </div>
             </div>
         </main>
     )

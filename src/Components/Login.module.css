@@ -19,6 +19,7 @@
     box-shadow: 2px 2px 2px 2px #EDF3FA;
     background-color: white;
     border: 1px solid white;
+    cursor:'pointer';
 }
 
 .top_box {
@@ -61,7 +62,8 @@
 }
 
 .registerfree {
-    color: #4A90E2
+    color: #4A90E2;
+    cursor: pointer;
 }
 
 .otp {

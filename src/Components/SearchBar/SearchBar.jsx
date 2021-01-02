@@ -11,7 +11,7 @@ const people = [...skills];
 const places = [...location]
 
 
-export function SearchBar() {
+export function SearchBar({setOpenDrawer}) {
     const [searchText, setSearchText] = useState("")
     const [searchLoc, setSearchLoc] = useState("")
     const [open,setOpen] = useState(true)
@@ -84,7 +84,7 @@ export function SearchBar() {
                     </div>
                     <div className = {styles.right_bottom}>
                         <div className = {styles.right_bottom_register}>
-                        <button className = {styles.right_bottom_register_btn}>Register for free</button>
+                        <button onClick={ () => setOpenDrawer(true) } className = {styles.right_bottom_register_btn}>Register for free</button>
                         </div>
                         <div className = {styles.right_bottom_upload}>
                         <button className = {styles.right_bottom_upload_btn} > Upload CV</button>

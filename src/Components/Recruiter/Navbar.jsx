@@ -1,5 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
+import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles({
     root: () => ({
@@ -11,7 +12,14 @@ const useStyles = makeStyles({
         justifyContent:'center',
         color: '#666',
         boxShadow:'0 1px 4px 0 rgba(9,50,131,.2)',
+
+        '& button':{
+            cursor: 'pointer'
+        },
         
+        '& #home > a': {
+            color:'#666'
+        },
         '& .wrapper': {
             height: '100%',
             width:'1024px',
@@ -163,8 +171,8 @@ export const Navbar = ({ loginTab }) => {
             <div className="wrapper">
                 <div className="left">
                     <img src="https://static.naukimg.com/s/5/114/i/naukriLogo.png" alt=""/>
-                    <div>
-                        <p>Home</p>
+                    <div id='home'>
+                        <Link to="/">Home</Link>
                     </div>
                     <div>
                         <p>Products</p>

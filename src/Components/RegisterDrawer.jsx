@@ -29,28 +29,19 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function RegisterDrawer() {
+export default function RegisterDrawer({setOpenDrawer, open}) {
   const classes = useStyles();
-  const [open, setOpen] = React.useState(false);
-
+  
   const handleDrawerOpen = () => {
-    setOpen(true);
+    setOpenDrawer(true);
   };
 
   const handleDrawerClose = () => {
-    setOpen(false);
+    setOpenDrawer(false);
   };
   return (
     <div>
       <div className={classes.root}>
-        <Button
-          variant="contained"
-          color="primary"
-          onClick={handleDrawerOpen}
-          className={clsx(open && classes.hide)}
-        >
-          register
-        </Button>
         <Drawer
           className={classes.drawer}
           variant="persistent"
