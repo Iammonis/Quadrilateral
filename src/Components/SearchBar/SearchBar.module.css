@@ -14,6 +14,7 @@
     background-color: #1C2B5C;
     height: 152px;
     padding-top: 10px;
+    position: relative;
 }
 
 .left {
@@ -178,4 +179,13 @@
     font-weight: 500;
     margin-top: 5px;
     color: rgb(100, 100, 100)
+}
+
+.popup{
+    width: 200px;
+    background-color:#fff;
+    z-index: 100;
+    position: absolute;
+    top: 140px; 
+    left: 80px;    
 }

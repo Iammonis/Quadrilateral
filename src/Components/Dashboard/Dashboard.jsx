@@ -11,11 +11,11 @@ import { HiringRecruiter } from "./HiringRecruiter";
 import {SearchBox} from './SearchBox';
 import {Companies} from './Companies'
 import {FaqCard} from './FaqCard';
-import {UserPage} from '../UserPage/UserPage'
-import {UserPostCard} from '../UserPage/UserPostCard'
+// import {UserPage} from '../UserPage/UserPage'
+// import {UserPostCard} from '../UserPage/UserPostCard'
 
 const Banner = styled.div`
-  background: url(https://static.naukimg.com/s/5/105/i/dashboardbg.png) #2e3339;
+  background: url('https://static.naukimg.com/s/5/105/i/dashboardbg.png') #2e3339;
   height: 240px;
   background-size: cover;
 `;
@@ -32,7 +32,6 @@ const Dashboard = () => {
           <div>
             <Typography style={{margin:"20px" ,fontWeight:600}}>Jobs</Typography>
             {/* Jobs card component */}
-            <UserPostCard />
           </div>
           <JobAlertCard />
           <div style={{ display: "flex" }}>
@@ -45,7 +44,6 @@ const Dashboard = () => {
           <HiringRecruiter />
         </div>
         <div>
-          <UserPage />
           <Companies />
           <FaqCard />
         </div>

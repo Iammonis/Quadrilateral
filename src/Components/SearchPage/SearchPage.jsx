@@ -8,6 +8,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useLocation, useHistory } from 'react-router-dom'
 import { Companies } from '../Dashboard/Companies'
 import { FaqCard } from '../Dashboard/FaqCard'
+import CircularProgress from '@material-ui/core/CircularProgress';
+
 
 const useStyles = makeStyles({
     root: () => ({
@@ -87,7 +89,7 @@ export const SearchPage = () => {
         handleRedirect()
     }, [url])
 
-    return (
+    return !loading ? (
         <main className={classes.root}>
             <Navbar hide={true} />
             <div className='mid'>
@@ -99,5 +101,11 @@ export const SearchPage = () => {
                 </div>
             </div>
         </main>
+    ) : (
+        <div style={{width:'100vw', height:'100vh'}}>
+            <div style={{ position:'absolute', top:'50%', left:'50%', transform: 'translate(-50%, -50%)' }}>
+                <CircularProgress />
+            </div>
+        </div>
     )
 }

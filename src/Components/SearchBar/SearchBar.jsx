@@ -93,7 +93,7 @@ export function SearchBar({setOpenDrawer}) {
                     </div>
                 </div>
             </div>
-        <div>
+        <div className={styles.popup}>
             <div>    
                 { searchText === "" ? null : open && (searchText.length >1 &&Skills.map(item => (
                 <div onClick = {()=>{setSearchText(item)
